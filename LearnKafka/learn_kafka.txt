@@ -1,0 +1,25 @@
+Single Node-Single Broker Configuration
+----------------------------------------
+- start server
+bin/kafka-server-start.sh config/server.properties
+- create topic
+kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic topic-name
+- get list of topics
+bin/kafka-topics.sh --list --zookeeper localhost:2181
+- start producer send msg
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topic-name
+- start consumer receive msg
+bin/kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic topic-name
+- describe topic
+bin/kafka-topics.bat --describe --zookeeper localhost:2181 --topic topic-name
+- edit topic
+bin/kafka-topics.sh —zookeeper localhost:2181 --alter --topic topic_name --partitions count
+- delete topic
+bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic topic_name
+- read msgs from beginning
+bin/kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic topic_name --from-beginning
+
+Single Node-Multiple Brokers Configuration
+------------------------------------------
+- create copy of more from config.properties and change port and broker.id and kafka-logs dir
+-

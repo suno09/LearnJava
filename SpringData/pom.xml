@@ -6,42 +6,32 @@
         <artifactId>LearnJava</artifactId>
         <groupId>groupId</groupId>
         <version>1.0-SNAPSHOT</version>
-    </parent>-->
+    </parent>
     <modelVersion>4.0.0</modelVersion>
-<!--    <artifactId>LearnSpring</artifactId>-->
+
+    <artifactId>SpringData</artifactId>-->
+
+    <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.3.RELEASE</version>
+        <version>2.3.4.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.sundev</groupId>
-    <artifactId>learnspring</artifactId>
+    <groupId>dz.sundev</groupId>
+    <artifactId>springdata</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>LearnSpring</name>
-    <description>Learn Spring Boot</description>
-    <packaging>war</packaging>
+    <name>SpringData</name>
+    <description>Demo project for Spring Boot</description>
 
     <properties>
         <java.version>11</java.version>
-        <!--		<start-class>dz.sundev.learnspring.LearnSpringApplication</start-class>-->
-        <start-class>dz.sundev.learnspring.LearnSpringApplicationWithWARfile</start-class>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
         <dependency>
@@ -56,6 +46,18 @@
         </dependency>
 
         <dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>2.3.8</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
@@ -66,32 +68,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.12</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>io.swagger</groupId>
-            <artifactId>swagger-annotations</artifactId>
-            <version>1.5.22</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.directory.studio</groupId>
-            <artifactId>org.apache.commons.io</artifactId>
-            <version>2.4</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-config</artifactId>
-        </dependency>
-
-
     </dependencies>
 
     <build>
@@ -102,4 +78,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

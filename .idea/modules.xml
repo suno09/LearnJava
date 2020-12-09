@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Kafka/LearnKafka.iml" filepath="$PROJECT_DIR$/Kafka/LearnKafka.iml" />
       <module fileurl="file://$PROJECT_DIR$/LearnJava.iml" filepath="$PROJECT_DIR$/LearnJava.iml" />
-      <module fileurl="file://$PROJECT_DIR$/LearnKafka/LearnKafka.iml" filepath="$PROJECT_DIR$/LearnKafka/LearnKafka.iml" />
-      <module fileurl="file://$PROJECT_DIR$/LearnSpring/LearnSpring.iml" filepath="$PROJECT_DIR$/LearnSpring/LearnSpring.iml" />
       <module fileurl="file://$PROJECT_DIR$/Main/Main.iml" filepath="$PROJECT_DIR$/Main/Main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring/Spring.iml" filepath="$PROJECT_DIR$/Spring/Spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringData/SpringData.iml" filepath="$PROJECT_DIR$/SpringData/SpringData.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringFX/LearnSpringFX.iml" filepath="$PROJECT_DIR$/SpringFX/LearnSpringFX.iml" />
     </modules>
   </component>
 </project>

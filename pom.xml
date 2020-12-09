@@ -10,8 +10,10 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>Main</module>
-        <module>LearnKafka</module>
-        <module>LearnSpring</module>
+        <module>Kafka</module>
+        <module>Spring</module>
+        <module>SpringFX</module>
+        <module>SpringData</module>
     </modules>
 
 

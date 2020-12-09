@@ -2,25 +2,32 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Kafka" />
+        <module name="SpringFX" />
+        <module name="SpringData" />
+        <module name="Spring" />
         <module name="Main" />
-        <module name="LearnKafka" />
-        <module name="LearnSpring" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Kafka" target="1.5" />
       <module name="LearnJava" target="1.5" />
-      <module name="LearnKafka" target="1.5" />
-      <module name="LearnSpring" target="11" />
       <module name="Main" target="1.5" />
+      <module name="Spring" target="11" />
+      <module name="SpringData" target="11" />
+      <module name="SpringFX" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="LearnSpring" options="-parameters" />
+      <module name="Spring" options="-parameters" />
+      <module name="SpringData" options="-parameters" />
+      <module name="SpringFX" options="-parameters" />
     </option>
   </component>
 </project>

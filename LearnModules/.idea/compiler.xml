@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="jpmshello" />
+        <module name="jpmshi" />
+        <module name="dz.elit.serviceprovider1" />
+        <module name="serviceproviderinterface" />
+        <module name="dz.elit.jpmshello" />
+        <module name="serviceprovider2" />
+        <module name="dz.elit.jpmshi" />
+        <module name="dz.elit.serviceproviderinterface" />
+        <module name="dz.elit.serviceprovider2" />
+        <module name="serviceprovider1" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

@@ -1,0 +1,12 @@
+"C:\Program Files\Java\jdk-11.0.5\bin\java.exe" --module-path dz.elit.jpmshello/target/jpmshello-1.0-SNAPSHOT.jar --module dz.elit.jpmshello/dz.elit.jpmshello.HelloModules
+# execute multiple modules
+"C:\Program Files\Java\jdk-11.0.5\bin\java.exe" --module-path dz.elit.jpmshello/target/jpmshello-1.0-SNAPSHOT.jar;dz.elit.jpmshi/target/jpmshi-1.0-SNAPSHOT.jar --module dz.elit.jpmshello/dz.elit.jpmshello.HelloModules
+# execute multiple modules with services
+"C:\Program Files\Java\jdk-11.0.5\bin\java.exe" --module-path dz.elit.jpmshello/target/jpmshello-1.0-SNAPSHOT.jar;dz.elit.jpmshi/target/jpmshi-1.0-SNAPSHOT.jar;dz.elit.serviceproviderinterface/target/serviceproviderinterface-1.0-SNAPSHOT.jar;dz.elit.serviceprovider1/target/serviceprovider1-1.0-SNAPSHOT.jar;dz.elit.serviceprovider2/target/serviceprovider2-1.0-SNAPSHOT.jar --module dz.elit.jpmshello/dz.elit.jpmshello.HelloModules
+#
+requires:
+exports: when compile and runtime
+opens: when runtime only
+
+
+

@@ -15,6 +15,7 @@
         <module>SpringFX</module>
         <module>SpringData</module>
         <module>RabbitMQ</module>
+        <module>DesignPattern</module>
     </modules>
 
 

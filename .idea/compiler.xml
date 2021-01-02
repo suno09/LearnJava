@@ -7,17 +7,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Kafka" />
         <module name="SpringFX" />
         <module name="RabbitMQ" />
         <module name="SpringData" />
+        <module name="Kafka" />
+        <module name="DesignPattern" />
+        <module name="LearnKafka" />
         <module name="Spring" />
+        <module name="LearnSpringFX" />
         <module name="Main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="DesignPattern" target="1.5" />
       <module name="Kafka" target="1.5" />
       <module name="LearnJava" target="1.5" />
+      <module name="LearnKafka" target="1.5" />
+      <module name="LearnSpringFX" target="11" />
       <module name="Main" target="1.5" />
       <module name="RabbitMQ" target="11" />
       <module name="Spring" target="11" />
@@ -27,6 +33,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="LearnSpringFX" options="-parameters" />
       <module name="RabbitMQ" options="-parameters" />
       <module name="Spring" options="-parameters" />
       <module name="SpringData" options="-parameters" />

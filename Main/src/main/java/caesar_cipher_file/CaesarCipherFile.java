@@ -5,7 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class CaesarCipherFile {
-    private static final String filePath = "cipher_record_no_encrypt.wav";
+    private static final String filePath = "cipher_record_original.wav";
     private static final String crFilePath = "cr_" + filePath + ".wav";
     private static final String deFilePath = "de_" + filePath + ".wav";
     private static final int shift = 200;

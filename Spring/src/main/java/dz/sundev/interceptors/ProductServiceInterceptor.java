@@ -4,10 +4,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
+import org.springframework.web.servlet.HandlerMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Map;
 
 /**
  * Interceptor in Spring Boot to perform operations under the following situations :
@@ -23,8 +25,20 @@ public class ProductServiceInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         System.out.println("Pre Handle method is Calling");
+        System.out.println("URL is {} " + request.getRequestURI());
 
-        System.out.println("URL is {} " + request.getRequestURL());
+        /*String parameter = request.getParameter("parameter");
+        if (parameter == "somevalue") {
+            request.setAttribute("customAttribute", "value");
+        }*/
+
+        final Map<String, String> pathVariables = (Map<String, String>) request
+                .getAttribute(HandlerMapping.URI_TEMPLATE_VARIABLES_ATTRIBUTE);
+
+        System.out.println("Method ====> " + request.getMethod());
+
+        pathVariables.forEach((s, s2) -> System.out.println(s + " ==> " + s2));
+        request.setAttribute("id", 7);
 
         return true;
     }

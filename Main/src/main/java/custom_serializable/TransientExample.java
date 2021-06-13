@@ -25,4 +25,3 @@ public class TransientExample {
                 ", Password : " + readUser.password);
     }
 }
-

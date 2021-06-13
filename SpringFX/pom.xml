@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>LearnSpringFX</artifactId>-->
+    <artifactId>SpringFX</artifactId>-->
 
     <modelVersion>4.0.0</modelVersion>
     <parent>
@@ -21,7 +21,7 @@
     <groupId>dz.sundev</groupId>
     <artifactId>SpringFX</artifactId>
     <version>2.2.4</version>
-    <name>TestSpringFX</name>
+    <name>SpringFX</name>
     <description>Demo project for Spring Boot With FX</description>
 
     <properties>

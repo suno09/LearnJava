@@ -24,9 +24,9 @@ public class ProductServiceController {
         return new ResponseEntity<>("Product is created successfully " + product, HttpStatus.CREATED);
     }
 
-    @RequestMapping(value = "/getIdProduct/{id}", method = RequestMethod.GET)
-    public String getIdProduct(@PathVariable("id") String id) {
-        return "id: " + id;
+    @RequestMapping(value = "/getIdProduct/{id_}", method = RequestMethod.GET)
+    public String getIdProduct(@PathVariable("id_") String id_, @RequestAttribute("id") Long id) {
+        return "id_: " + id_ + " = id: " + id;
     }
 
     @RequestMapping(value = "/getProductByName", method = RequestMethod.GET)

@@ -23,9 +23,9 @@ public class Book implements Serializable {
     @Column(unique = true)
     private String isbn;
 
-    @OneToMany(mappedBy = "book", fetch = FetchType.LAZY,
+    /*@OneToMany(mappedBy = "book", fetch = FetchType.LAZY,
             cascade = CascadeType.ALL)
-    private Set<Page> pages;
+    private Set<Page> pages;*/
 
     public Book(String title, String author, String isbn) {
         this.title = title;

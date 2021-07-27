@@ -4,6 +4,10 @@ import dz.sundev.db.cascade_persist.Address_;
 import dz.sundev.db.cascade_persist.Address_Repository;
 import dz.sundev.db.cascade_persist.Person_;
 import dz.sundev.db.cascade_persist.Person_Repository;
+import dz.sundev.db.onetomany.Book;
+import dz.sundev.db.onetomany.BookRepository;
+import dz.sundev.db.onetomany.Page;
+import dz.sundev.db.onetomany.PageRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -74,7 +78,7 @@ public class SpringDataApplication {
 		};
 	}*/
 
-	/*@Bean
+	@Bean
 	public CommandLineRunner mappingDemo(BookRepository bookRepository,
 										 PageRepository pageRepository) {
 		return args -> {
@@ -90,10 +94,15 @@ public class SpringDataApplication {
 			pageRepository.save(new Page(65, "Java 8 contents", "Java 8", book));
 			pageRepository.save(new Page(95, "Concurrency contents", "Concurrency", book));
 
-			bookRepository.findAll().forEach(item -> System.out.println(item + "=>" + item.getPages()));
+//			bookRepository.findAll().forEach(item -> System.out.println(item + "=>" + item.getPages()));
+			System.out.println("before delete");
+			System.out.println(book);
+			pageRepository.findAll().forEach(item -> System.out.println(item + "=>" + item.getBook()));
+			System.out.println("after delete");
+			bookRepository.delete(book);
 			pageRepository.findAll().forEach(item -> System.out.println(item + "=>" + item.getBook()));
 		};
-	}*/
+	}
 
 	/*@Bean
 	public CommandLineRunner mappingDemo(PersonRepository personRepository,
@@ -123,7 +132,7 @@ public class SpringDataApplication {
 		};
 	}*/
 
-	@Bean
+	/*@Bean
 	public CommandLineRunner mappingDemo(Person_Repository person_Repository,
 										 Address_Repository address_Repository) {
 		return args -> {
@@ -134,8 +143,8 @@ public class SpringDataApplication {
 			// create an address instance
 			Address_ address_ = new Address_("Lake View 321", 15, "Berlin", 95781);
 
-			/** CascadeType.PERSIST */
-			/*person_.setAddresses_(Arrays.asList(address_));
+			*//** CascadeType.PERSIST *//*
+			*//*person_.setAddresses_(Arrays.asList(address_));
 			address_.setPerson_(person_);
 
 			// save the parent
@@ -143,10 +152,10 @@ public class SpringDataApplication {
 			person_Repository.save(person_);
 
 			person_Repository.findAll().forEach(item -> System.out.println(item + "=>" + item.getAddresses_()));
-			address_Repository.findAll().forEach(item -> System.out.println(item + "=>" + item.getPerson_()));*/
-			/** END */
+			address_Repository.findAll().forEach(item -> System.out.println(item + "=>" + item.getPerson_()));*//*
+			*//** END *//*
 
-			/** CascadeType.MERGE */
+			*//** CascadeType.MERGE *//*
 			person_.setAddresses_(Arrays.asList(address_));
 			address_.setPerson_(person_);
 
@@ -164,9 +173,9 @@ public class SpringDataApplication {
 			System.out.println("after merge");
 			person_Repository.findAll().forEach(item -> System.out.println(item + "=>" + item.getAddresses_()));
 			address_Repository.findAll().forEach(item -> System.out.println(item + "=>" + item.getPerson_()));
-			/** END */
+			*//** END *//*
 
 
 		};
-	}
+	}*/
 }

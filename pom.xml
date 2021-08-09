@@ -33,6 +33,7 @@
         <module>DesignPattern</module>
         <module>Gmail</module>
         <module>GraphQL</module>
+        <module>Quartz</module>
     </modules>
 
 

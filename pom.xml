@@ -34,6 +34,7 @@
         <module>Gmail</module>
         <module>GraphQL</module>
         <module>Quartz</module>
+        <module>HackerRank</module>
     </modules>
 
 

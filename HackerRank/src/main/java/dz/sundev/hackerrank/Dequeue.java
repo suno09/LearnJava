@@ -1,14 +1,9 @@
 package dz.sundev.hackerrank;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Deque;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Dequeue {
     public static void main(String[] args) {
@@ -18,10 +13,11 @@ public class Dequeue {
         }*/
 
 //        List<Integer> nums = Arrays.asList(3, 3, 2, 2, 3, 3);
-//        List<Integer> nums = Arrays.asList(5,3,5,2,3,2);
-//        List<Integer> nums = Arrays.asList(1,1,1);
+//        List<Integer> nums = Arrays.asList(5, 3, 5, 2, 3, 2);
+        List<Integer> nums = Arrays.asList(1, 4, 1, 1, 1, 1);
+        int n = nums.size(), m = 3;
 
-        List<Integer> nums = null;
+        /*List<Integer> nums = null;
         String fileName = "input10.txt";
         int n = 0, m = 0;
 
@@ -37,7 +33,7 @@ public class Dequeue {
                     .collect(Collectors.toList());
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
 
 
 //        IntStream.range(0, n)
@@ -47,16 +43,21 @@ public class Dequeue {
 //                            .nextInt(1, 1_000_000));
 //                });
 
-        Deque<Integer> deque = new ArrayDeque<>(nums.subList(0, m));
+        Deque<Integer> deque = new ArrayDeque<>(nums.subList(0, m - 1));
 
-        long max = deque.stream().distinct().count();
+        long distinct = deque.stream().distinct().count();
+        long max = distinct;
 
-        for (int i = m; i < n; i++) {
+        for (int i = m - 1; i < n; i++) {
             System.out.printf("%d/%d\n", i, nums.size());
             int num = nums.get(i);
 //            System.out.printf("%s, %d", deque, num);
             if (!deque.contains(num)) {
-                max++;
+                distinct++;
+                if (max < distinct) {
+                    max = distinct;
+                }
+
                 if (max == m) {
                     break;
                 }
@@ -67,13 +68,13 @@ public class Dequeue {
             deque.add(num);
             int first = deque.poll();
             if (!deque.contains(first)) {
-                max--;
+                distinct--;
             }
 
 //            System.out.printf(" => %d\n", max);
         }
 
-        System.out.println(deque);
+//        System.out.println(deque);
         System.out.print(max);
     }
 }
